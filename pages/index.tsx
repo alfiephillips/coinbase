@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
+
 import styled from "styled-components";
+import Dashboard from "./dashboard";
 
 import { useWeb3 } from "@3rdweb/hooks";
 
@@ -9,16 +11,13 @@ const Home: NextPage = () => {
   return (
     <Wrapper>
       {address ? (
-        <Dashboard />
+        <Dashboard address={address} />
       ) : (
         <WalletConnect>
+          <Title>Coinbase</Title>
           <Button onClick={() => connectWallet("injected")}>
             Connect Wallet
           </Button>
-          <Details>
-            You need Chrome to be <br />
-            able to run this app.
-          </Details>
         </WalletConnect>
       )}
     </Wrapper>
@@ -27,39 +26,36 @@ const Home: NextPage = () => {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
+  max-width: 100vw;
+  background-color: whitesmoke;
+  color: black;
+  display: grid;
+  place-items: center;
 `;
 
-const Dashboard = styled.div`
+const Title = styled.h1`
+  font-size: 5rem;
+  color: #0052ff;
+`;
+
+const WalletConnect = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
 `;
-
-const WalletConnect = styled.div``;
 
 const Button = styled.button`
-  background: #f5f5f5;
+  background: #0052ff;
   border: 1px solid #dcdcdc;
   border-radius: 4px;
-  color: #333;
+  color: whitesmoke;
   font-size: 16px;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 24px;
   margin-top: 20px;
   cursor: pointer;
-`;
-
-const Details = styled.p`
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 20px;
-  text-align: center;
 `;
 
 export default Home;
