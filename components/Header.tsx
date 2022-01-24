@@ -16,7 +16,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.div`
-  width: calc(100% - 3rem);
+  width: 100%;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #282b2f;
   display: flex;
