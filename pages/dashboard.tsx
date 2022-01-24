@@ -1,11 +1,11 @@
-import React from "react";
+import Header from "../components/Header";
 
 interface DashboardProps {
   address: string;
 }
 
 const Dashboard = ({ address }: DashboardProps) => {
-  return <div>{address}</div>;
+  return <Header />;
 };
 
 export default Dashboard;

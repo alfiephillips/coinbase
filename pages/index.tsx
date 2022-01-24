@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   display: flex;
   height: 100vh;
   max-width: 100vw;
-  background-color: whitesmoke;
+  background-color: black;
   color: black;
   display: grid;
   place-items: center;
