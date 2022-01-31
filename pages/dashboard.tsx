@@ -1,11 +1,13 @@
 import Header from "../components/Header";
 
 import styled from "styled-components";
+import { NextPage } from "next";
+
 interface DashboardProps {
   address: string;
 }
 
-const Dashboard = ({ address }: DashboardProps) => {
+const Dashboard: NextPage<DashboardProps> = ({ address }) => {
   return (
     <Wrapper>
       <MainContainer>

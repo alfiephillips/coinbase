@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Header = () => {
+import { NextPage } from "next";
+
+const Header: NextPage = () => {
   return (
     <Wrapper>
       <Title>Assets</Title>
