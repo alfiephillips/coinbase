@@ -2,6 +2,7 @@ import Header from "../components/Header";
 
 import styled from "styled-components";
 import { NextPage } from "next";
+import Portfolio from "../components/Portfolio";
 
 interface DashboardProps {
   address: string;
@@ -12,6 +13,7 @@ const Dashboard: NextPage<DashboardProps> = ({ address }) => {
     <Wrapper>
       <MainContainer>
         <Header />
+        <Portfolio />
       </MainContainer>
     </Wrapper>
   );

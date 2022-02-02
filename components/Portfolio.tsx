@@ -1,10 +1,31 @@
 import { NextPage } from "next";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import styled from "styled-components";
 
 const Portfolio: NextPage = () => {
   return (
-    
-  )
+    <Wrapper>
+      <PortfolioTable>
+        <TableItem>
+          <Title>Your Assets</Title>
+        </TableItem>
+        <Divider />
+        <Table>
+          <TableItem>
+            <TableRow>
+              <div>Name</div>
+              <div>Balance</div>
+              <div>Price</div>
+              <div>Allocation</div>
+              <div>
+                <BsThreeDotsVertical />
+              </div>
+            </TableRow>
+          </TableItem>
+        </Table>
+      </PortfolioTable>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.div`
